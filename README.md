@@ -1,14 +1,23 @@
-# Shipment Label Web App
+# Shipping Label Web App
 
 ### Setup
-1. Clone this repository
-2. Create a virtual environment (if you'd like)
-3. Run `pip install requirements.txt`
-4. `cd` into `shipping` and run `python manage.py runserver`
-5. Create a superuser by running `python manage.py createsuperuser`
-6. Head to http://127.0.0.1:8000/login/ and login with the credentials you just made.
-7. Enter shipping and parcel information and hit submit
-8. To logout, go to http://127.0.0.1:8000/logout/
+1. Install Python (if you haven't already)
+2. Clone this repository and `cd` into it
+3. If you have virtualenv installed, go to the next step. Otherwise start following instructions in VirtualEnv Setup
+4. Enter your virtualenv (if you'd like)
+5. Run `pip install -r requirements.txt`
+6. `cd` into `shipping` and run `python manage.py runserver`
+7. Create a superuser by running `python manage.py createsuperuser`
+8. Head to http://127.0.0.1:8000/login/ and login with the credentials you just made.
+9. Enter shipping and parcel information and hit submit
+10. To logout, go to http://127.0.0.1:8000/logout/
+
+### VirtualEnv Setup
+1. Run `pip install virtualenv` in the top folder
+2. Run `virtualenv env`
+3. To enter the virtual environment, run `source env/bin/activate`
+4. To deactivate the virtual environment just run `deactivate`
+5. If you're having issues, check the links in the debugging section of README
 
 ### Creating Extra Users
 For testing purposes, you can create extra users!
@@ -24,3 +33,6 @@ I decided to only store the shipment label url and tracking numbers in the datab
 
 ### Debugging
 If you're getting an error saying `No rates found.`, this is because EasyPost couldn't find a rate for the specified package dimensions. For testing purposes, inputting 10 for all fields should succeed.
+
+Installing pip: https://pip.pypa.io/en/stable/installing/
+VirtualEnv: https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
